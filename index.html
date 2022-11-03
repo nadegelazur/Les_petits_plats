@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row row_headerLogo">
+            <div class="col-4"></div>           
+            <img class="col-4 navbar-brand navbar-epand logo mt-5 mb-3" src="assets/images/icons/logo-les-petits-plats.png" alt="Logo du site - Les petits plats"> 
+            <div class="col-4"></div>
+        </div>
+    
+        <!-- Main search -->
+        <div class="row row_mainRecherche mb-3">
+            <div class="col">
+                <form class="d-flex" role="search">
+                    <div class="col-md-12 no-error">
+                        <input class="form-control me-2 form-control-lg" type="text" id="filterInpit" placeholder="Rechercher une recette" aria-label="Search" data-search>
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </div>                 
+                </form>
+            </div>   
+        </div>
+        <!-- Message Search result : -->
+        <div class="row row_resultSearch mb-3" id="yes-error">
+            <div class="col-md-12 error-msg">
+                Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc...
+            </div>
+        </div>
+        <!-- Badges added dynamically: -->
+        <div class="row row_tags mb-3">
+            <div class="col tag-filter" id="ingredients_tags">
+                <button class="btn btn-primary">Coco
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
+            </div>
+			<div class="col tag-filter" id="appliances_tags"></div>
+			<div class="col tag-filter" id="ustensils_tags"></div>
+        </div>
+         <!-- Filters for advanced search: -->
+        <div class="row dropdown row_dropDown mb-3">
+            <div class="filter filter-ingridient">
+                <label id="ingredient-filter-label" for="ingredient" class="clicked">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="dropdown" id="ingredient" aria-expanded="">
+                        <span>Ingrédients</span>
+                        <i class="fa-solid fa-chevron-down" id="ingredient-filter-icon"></i>  
+                    </button>    
+                    <ul class="row dropdown-menu closed ul-tag" id="ingredient-list" data-filter="ingredient" role="listbox">
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                        <li><a class="dropdown-item" href="#">Ingredient</a></li>
+                    </ul>   
+                </label>
+            </div>         
+            <div class="filter filter-appareil">
+                <label id="appareil-filter-label" for="appareil">
+                    <button class="btn btn-lg" data-toggle="dropdown" id="appareil">
+                        <span>Appareils</span>
+                        <i class="fa-solid fa-chevron-down" id="appareil-filter-icon"></i>  
+                    </button>    
+                    <ul class="row dropdown-menu closed" id="appareil-list" data-filter="appareil">
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                        <li><a class="dropdown-item" href="#">Appareils</a></li>
+                    </ul>   
+                </label>
+            </div>           
+            <div class="filter filter-unstensile">
+                <label id="ustensile-filter-label" for="ustensile">
+                    <button class="btn btn-lg" data-toggle="dropdown" id="ustensile">
+                        <span>Ustensiles</span>
+                        <i class="fa-solid fa-chevron-down" id="ustensile-filter-icon"></i>  
+                    </button>    
+                    <ul class="row dropdown-menu closed" id="ustensile-list" data-filter="ustensile">
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                        <li><a class="dropdown-item" href="#">Ustensiles</a></li>
+                    </ul>   
+                </label>
+            </div>
+            
+        </div>    
+             
+    </div>    
+       
+    <div class="container container__recipes">
+        <div class="row"></div>
+        <!-- <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div> 
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div> 
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="cart-title">Titre de la carte</h5>
+                        <p class="card-text">Contenu textuel de la carte</p>
+                    </div>   
+                </div>   
+            </div> 
+        </div>-->
+    </div>
+        
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+    <!-- User file -->
+    <script type="module" src="scripts/recipes.js"></script>
+    <script type="module" src="scripts/pages/index.js"></script>
+    <!-- Icons file-->
+    <script src="https://kit.fontawesome.com/73e0b520f9.js"></script> 
+    
+</body>
+</html>

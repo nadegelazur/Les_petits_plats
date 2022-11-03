@@ -1,0 +1,121 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand img {
+    width: 100%;
+    
+}
+
+/*** BARRE DE RECHERCHE ***/
+.row_mainRecherche
+.no-error {
+    padding: 0;
+    position: relative;
+}
+#search-bar-input {
+    background-color: #E7E7E7;
+}
+.search-icon {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    padding-right: 5px;
+}
+.error-msg {
+    color: red;
+    display: none;
+}
+/*** TAGS ***/
+.tag-filter {
+    display: block;
+}
+/*** DROPDOWN ***/
+.dropdown-menu.show {
+    display: flex;
+    width: 40%;    
+}
+#ingredient-list {
+    background-color: #3282F7;
+}
+#appareil-list {
+    background-color: #68D9A4;
+}
+#ustensile-list {
+    background-color:#ED6454;
+}
+.dropdown-item {
+    color: #fff!important;
+}
+.filter {
+    margin-right: 15px;
+}
+.fa-chevron-down,
+.fa-chevron-up {
+    padding-left: 15px;
+    display: block;
+}
+.btn {
+    font-size: 18px;
+}
+.btn#appareil {
+    background-color: #68D9A4;
+    color: #fff;
+}
+.btn#ustensile {
+    background-color: #ED6454;
+    color: #fff;
+}
+
+/*** RECIPES CARD ***/
+
+.card {
+    border-radius: 5px;
+}
+.hide {
+    display: none;
+}
+.card-img-top {
+    height: 178px;
+    background-color: #C7BEBE ;
+
+}
+.card-body {
+    height: 186px;
+    background-color: #E7E7E7; 
+}
+h5 {
+    font-size: 18px;
+}
+.card-title {
+    padding-right: 0;
+    font-weight: 400;
+}
+.card-time {
+    text-align: right;
+    padding-left: 0;
+}
+.fa-clock {
+    padding-right: 5px;
+}
+p {
+    font-size: 12px;
+    line-height: 100%;
+    width: 171px;
+    height: 109px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.card-ingridients {
+    width: 171px;
+    height: 105px;
+    line-height: 14px;
+    letter-spacing: -0.5px;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.row_dropDown {
+    margin: 0;
+}
