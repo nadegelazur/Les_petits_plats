@@ -1,64 +1,79 @@
 import { recipes } from '../../data/recipes.js'
 import { RecipeFactory } from '../factory/recipeFactory.js'
 import { mainRecherche } from '../utils/mainRecherche.js'
+import { listDropdown } from '../utils/tagRecherche.js'
+//array of 50 recipes
+export let currentRecipes = { recipes: recipes }
 
+//console.log(currentRecipes.recipes)
 
-export const updateRecipes = (recipes) => {
-  //console.log(recipes)
+// afiche tout les recettes sur la page grace à RecipeFactory
+export const updateRecipes = (currentRecipes) => {
   const cardRecipes = document.querySelector('.container__recipes .row')
   cardRecipes.innerHTML = ''
-  recipes.forEach(recipe => {
+  currentRecipes.recipes.forEach(recipe => {
     const cardModel = new RecipeFactory(recipe)
-    cardRecipes.innerHTML += cardModel.createHtml()
+    cardRecipes.innerHTML += cardModel.createHtml() 
   })
 }
 
-const updateDropbox = (recipes) => {
-  const ingredients = []
-  const newIngredients = []
-  const ustensils = []
-  const appliance = []
+// Open DROPDOWN liste
+export const updateDropbox = (recipes) => {
+  // console.log(recipes)
+  let ingredients = []
+  let ustensils = []
+  let appliance = []
 
   recipes.forEach(recipe => {
-    // Ingredients
-    ingredients.push(...recipe.ingredients)
-    ingredients.forEach(ingredient => {
-      // console.log(ingredient.ingredient)
-      newIngredients.push(ingredient.ingredient)
-    })
-    // Ustensils
-    ustensils.push(...recipe.ustensils) // tableau
-    // Appliance
-    appliance.push(recipe.appliance)
     
+    recipe.ingredients.forEach(ingredient => {
+      ingredients.push(ingredient.ingredient)
+    })
+    ustensils.push(...recipe.ustensils) // tableau
+    appliance.push(recipe.appliance)
   })
-  console.log(newIngredients)
-  console.log(ustensils)
-  console.log(appliance)
+  // console.log(ingredients)
+  // new Set supprime repetitions
+  ingredients = [...new Set(ingredients)].sort()
+  ustensils = [...new Set(ustensils)].sort()
+  appliance = [...new Set(appliance)].sort()
+
+  listIngredients(ingredients)
+  listAppliance(ustensils)
+  listUstensils(appliance)
+}
+// creation des Dropdown list's => ingredient - appareil - ustensile
+const listIngredients = (listIngredients) => { 
+  const ul = document.getElementById('ingredient-list')
+  ul.innerHTML = ''
+  listIngredients.forEach(ing => {
+    listDropdown (ing, ul, 'ingredients')
+  })
+}
+const listAppliance = (listAppliance) => {
+  const ul = document.getElementById('appareil-list')
+  listAppliance.forEach(appl => {
+    listDropdown (appl, ul, 'appliance')
+  })
+}
+const listUstensils = (listUstensils) => {
+  const ul = document.getElementById('ustensile-list')
+  listUstensils.forEach(ust => {
+    listDropdown (ust, ul, 'ustensils')
+  })
 }
 
-const btnIngredients = document.getElementById('ingredient')
-
-btnIngredients.addEventListener('click', openDropbox)
-function openDropbox() {
-  const dropdownMenu = document.querySelector('.dropdown-menu')
-
-}
-document.querySelector('.fa-circle-xmark').addEventListener('click', (e) => {
-  console.log('close tag')
-  const tagName = document.querySelector('.tag-filter')
-  tagName.style.display = 'none'
-})
 // *** init GLOBAL *** //
 const init = async () => {
+  // console.log(currentRecipes)
 
-  updateRecipes(recipes)
+  updateRecipes(currentRecipes)
 
   mainRecherche(recipes)
   
   updateDropbox(recipes)
+
 }
 
 init()
 
-const dropdownMenu = document.querySelector('.dropdown-menu')

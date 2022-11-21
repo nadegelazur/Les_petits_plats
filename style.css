@@ -4,8 +4,7 @@
     padding: 0;
 }
 .navbar-brand img {
-    width: 100%;
-    
+    width: 100%; 
 }
 
 /*** BARRE DE RECHERCHE ***/
@@ -31,19 +30,53 @@
 .tag-filter {
     display: block;
 }
+.btn-tags {
+    height: 37px;
+    border-radius: 5px;
+    color:  #fff;
+    font-size: 14px !important;
+    margin-right: 10px;
+    line-height: 17px;
+    text-align: start;
+    border: none;
+    padding: 5px;
+}
+
+.fa-circle-xmark {
+    color: #fff;
+}
+
 /*** DROPDOWN ***/
-.dropdown-menu.show {
-    display: flex;
-    width: 40%;    
+.dropdown-menu {
+    border: none !important;
+    min-width: 25rem !important;
+    transform: none !important;
+    display: none;
+    top: 93% !important;
+    width: 50%;
+    position: absolute !important;
+    height: auto;
 }
-#ingredient-list {
-    background-color: #3282F7;
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: #f8f9fa5e;
 }
-#appareil-list {
-    background-color: #68D9A4;
+
+#ingredient-list,
+.btn-ingredients {
+    background-color: #007bff;
 }
-#ustensile-list {
+#appareil-list,
+.btn-appliance {
+    background-color: #68D9A4;    
+}
+#ustensile-list,
+.btn-ustensils {
     background-color:#ED6454;
+}
+ 
+.filter-appareil {
+    position: relative;
 }
 .dropdown-item {
     color: #fff!important;
@@ -51,21 +84,42 @@
 .filter {
     margin-right: 15px;
 }
-.fa-chevron-down,
+
+/* .fa-chevron-down,
 .fa-chevron-up {
     padding-left: 15px;
     display: block;
-}
+} */
 .btn {
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.advancedSearch {
+    display: none;
+}
+.btn#ingredient input {
+    background-color:#007bff;
+    border: none;
 }
 .btn#appareil {
     background-color: #68D9A4;
     color: #fff;
 }
+.btn#appareil input {
+    background-color: #68D9A4;
+    color: #fff;
+    border: none;
+}
 .btn#ustensile {
     background-color: #ED6454;
     color: #fff;
+}
+.btn#ustensile input{
+    background-color: #ED6454;
+    color: #fff;
+    border: none;
 }
 
 /*** RECIPES CARD ***/

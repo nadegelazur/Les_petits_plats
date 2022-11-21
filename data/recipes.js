@@ -17,7 +17,7 @@ export const recipes = [
       {
         ingredient: 'Crème de coco',
         quantity: 2,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       },
       {
         ingredient: 'Sucre',
@@ -31,7 +31,7 @@ export const recipes = [
     time: 10,
     description: "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
     appliance: 'Blender',
-    ustensils: ['cuillère à Soupe', 'verres', 'presse citron']
+    ustensils: ['cuillère à soupe', 'verre', 'presse citron']
   },
   {
     id: 2,
@@ -60,13 +60,13 @@ export const recipes = [
         quantity: 5
       },
       {
-        ingredient: 'Lait de Coco',
+        ingredient: 'Lait de coco',
         quantity: 100,
         unit: 'ml'
       }
     ],
     time: 60,
-    description: 'Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur au moins 2 heures. (Si possible faites-le le soir pour le lendemain. Après avoir laissé mariner le poisson, coupez le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poissons avec le citron cette fois ci dans un Saladier. Ajouter le lait de coco. Pour ajouter un peu plus de saveur vous pouvez ajouter 1 à 2 cuillères à soupe de Crème de coco',
+    description: 'Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur au moins 2 heures. (Si possible faites-le le soir pour le lendemain. Après avoir laissé mariner le poisson, coupez le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poissons avec le citron cette fois ci dans un Saladier. Ajouter le lait de coco. Pour ajouter un peu plus de saveur vous pouvez ajouter 1 à 2 cuillère à soupe de Crème de coco',
     appliance: 'Saladier',
     ustensils: ['presse citron']
   }, {
@@ -99,7 +99,7 @@ export const recipes = [
       {
         ingredient: "Huile d'olive",
         quantity: 1,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 80,
@@ -165,7 +165,7 @@ export const recipes = [
       {
         ingredient: 'Crème fraîche',
         quantity: 2,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       },
       {
         ingredient: 'gruyère râpé',
@@ -175,7 +175,7 @@ export const recipes = [
       {
         ingredient: 'Moutarde de Dijon',
         quantity: 1,
-        unite: 'cuillères à soupe'
+        unite: 'cuillère à soupe'
       }
     ],
     time: 45,
@@ -193,7 +193,7 @@ export const recipes = [
         quantity: 1
       },
       {
-        ingredient: 'Pomme',
+        ingredient: 'Pommes',
         quantity: 3
       },
       {
@@ -323,7 +323,7 @@ export const recipes = [
       }
     ],
     time: 15,
-    description: "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olives à votre gout.",
+    description: "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olive à votre gout.",
     appliance: 'Saladier',
     ustensils: ['cuillère en bois', 'couteau']
   },
@@ -360,7 +360,7 @@ export const recipes = [
     time: 60,
     description: "Commencer par cuire les pommes de terre dans l'eau bouillante. Puis épluchez les et coupez les en rondelles. Émincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le reblochon, soit en tranches, soit le couper en 2 dans le sens de l'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C'est prêt !",
     appliance: 'Four',
-    ustensils: ['plat à gratin', 'couteau', 'Économe']
+    ustensils: ['plat à gratin', 'couteau', 'économe']
   }, {
     id: 11,
     name: 'Salade tomate, mozzarella et pommes',
@@ -401,7 +401,7 @@ export const recipes = [
     ustensils: ['couteau', 'cuillère à melon']
   }, {
     id: 12,
-    name: 'Compote pomme rhubarbe',
+    name: 'Compote pommes rhubarbe',
     servings: 4,
     ingredients: [
       {
@@ -507,7 +507,7 @@ export const recipes = [
   },
   {
     id: 15,
-    name: 'Crêpes Chocolat Banane',
+    name: 'Crêpes Chocolat Bananes',
     servings: 10,
     ingredients: [
       {
@@ -535,13 +535,13 @@ export const recipes = [
         unit: 'grammes'
       },
       {
-        ingredient: 'Banane',
+        ingredient: 'Bananes',
         quantity: 4
       }
     ],
     time: 60,
     description: "Mélangez dans un saladier, la farine, les oeufs, et le lait. Battez jusqu'à avoir une masse homogène. Pendant ce temps faites fondre le beurre et ajoutez en une partie à la pâte à crêpes. Faire fondre le chocolat ( avec le reste du beurre salé ). Lorsque vous chauffez les crêpes. Ajouter le chocolat fondu et les bananes coupées en rondelles. Ajoutez une touche de chantilly pour les gourmands",
-    appliance: 'Poêle à crêpe',
+    appliance: 'poêle à crêpe',
     ustensils: ['saladier', 'louche', 'cuillère en bois']
   },
   {
@@ -570,7 +570,7 @@ export const recipes = [
         unit: 'tiges'
       },
       {
-        ingredient: "huile d'olives",
+        ingredient: "huile d'olive",
         quantity: 2,
         unit: 'cuillère à soupe'
       }
@@ -597,7 +597,7 @@ export const recipes = [
       {
         ingredient: 'Jus de citron',
         quantity: 1,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       },
       {
         ingredient: 'Glaçons',
@@ -639,7 +639,7 @@ export const recipes = [
   },
   {
     id: 19,
-    name: 'Shake Banane Kiwi',
+    name: 'Shake Bananes Kiwi',
     servings: 4,
     ingredients: [
       {
@@ -661,7 +661,7 @@ export const recipes = [
         unit: 'grammes'
       },
       {
-        ingredient: 'Banane',
+        ingredient: 'Bananes',
         quantity: 1
       }
     ],
@@ -698,7 +698,7 @@ export const recipes = [
       {
         ingredient: "huile d'olive",
         quantity: 1,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 30,
@@ -742,9 +742,9 @@ export const recipes = [
       }
     ],
     time: 30,
-    description: 'Cuisiner la viande hachée dans une poêle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oignons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraîche à la viande hachée. Servir.',
+    description: 'Cuisiner la viande hachée dans une poêle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oignons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomate à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraîche à la viande hachée. Servir.',
     appliance: 'Casserole',
-    ustensils: ['Cuillère en bois', 'louche', 'couteau']
+    ustensils: ['cuillère en bois', 'louche', 'couteau']
   },
   {
     id: 22,
@@ -852,7 +852,7 @@ export const recipes = [
       {
         ingredient: 'Mayonnaise',
         quantity: 2,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 40,
@@ -909,7 +909,7 @@ export const recipes = [
         quantity: 1
       },
       {
-        ingredient: "Huile d'olives"
+        ingredient: "Huile d'olive"
       },
       {
         ingredient: 'Oignon',
@@ -1082,8 +1082,8 @@ export const recipes = [
     ],
     time: 60,
     description: "Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
-    appliance: 'Poêle',
-    ustensils: ['Couteau', 'économe']
+    appliance: 'poêle',
+    ustensils: ['couteau', 'économe']
   },
   {
     id: 32,
@@ -1124,7 +1124,7 @@ export const recipes = [
     time: 20,
     description: "Beurrer les tranches de pain, ajouter entre 2 tranches de pain de mie 1 tranche d’emmental, une de blanc de dinde, et une autre d'emmental. Dans un récipient, mélanger le gruyère rappé avec le lait et la noix de muscade. Mettre sur les croque monsieur. Placer au four durant 10 minutes.",
     appliance: 'Four',
-    ustensils: ['râpe à fromage', 'cuillère à Soupe', 'couteau']
+    ustensils: ['râpe à fromage', 'cuillère à soupe', 'couteau']
   },
   {
     id: 33,
@@ -1148,12 +1148,12 @@ export const recipes = [
       {
         ingredient: 'Fromage blanc',
         quantity: 4,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       },
       {
         ingredient: 'Jus de citron',
         quantity: 1,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 5,
@@ -1210,12 +1210,12 @@ export const recipes = [
       {
         ingredient: 'Crème fraîche',
         quantity: 2,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       },
       {
         ingredient: 'Cumin',
         quantity: 1,
-        unit: 'cuillères à café'
+        unit: 'cuillère à café'
       },
       {
         ingredient: 'Noix de muscade',
@@ -1259,7 +1259,7 @@ export const recipes = [
       {
         ingredient: 'Maïzena',
         quantity: 1,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 35,
@@ -1282,7 +1282,7 @@ export const recipes = [
         unit: 'grammes'
       },
       {
-        ingredient: "Huile d'olives",
+        ingredient: "Huile d'olive",
         quantity: 25,
         unit: 'cl'
       },
@@ -1291,7 +1291,7 @@ export const recipes = [
         quantity: 1
       },
       {
-        ingredient: 'Coulis de tomates',
+        ingredient: 'Coulis de tomate',
         quantity: 20,
         unit: 'cl'
       },
@@ -1303,9 +1303,9 @@ export const recipes = [
 
     ],
     time: 60,
-    description: "Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomates. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage râpé",
+    description: "Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomate. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage râpé",
     appliance: 'Four',
-    ustensils: ['couteau', 'cuillère en bois', 'Poêle à frire']
+    ustensils: ['couteau', 'cuillère en bois', 'poêle à frire']
   },
   {
     id: 38,
@@ -1335,7 +1335,7 @@ export const recipes = [
     time: 20,
     description: 'Fouettez les oeufs, le sucre et le lait. tremper les tranches de pain. Le cuire au four pendant environ 10 minutes à 180°. Servir',
     appliance: 'Four',
-    ustensils: ['fouet', 'bol', 'Cuillère à Soupe']
+    ustensils: ['fouet', 'bol', 'cuillère à soupe']
   },
   {
     id: 39,
@@ -1343,7 +1343,7 @@ export const recipes = [
     servings: 40,
     ingredients: [
       {
-        ingredient: 'Pomme',
+        ingredient: 'Pommes',
         quantity: 2
       },
       {
@@ -1384,12 +1384,12 @@ export const recipes = [
       {
         ingredient: 'Sucre en poudre',
         quantity: 4,
-        unit: 'cuillères à café'
+        unit: 'cuillère à café'
       },
       {
         ingredient: 'Bicarbonate',
         quantity: 1,
-        unit: 'cuillères à café'
+        unit: 'cuillère à café'
       }
     ],
     time: 10,
@@ -1666,7 +1666,7 @@ export const recipes = [
         quantity: 2
       },
       {
-        ingredient: 'Kiwis',
+        ingredient: 'Kiwi',
         quantity: 3
       },
       {
@@ -1681,7 +1681,7 @@ export const recipes = [
       {
         ingredient: 'Miel',
         quantity: 2,
-        unit: 'cuillères à soupe'
+        unit: 'cuillère à soupe'
       }
     ],
     time: 0,
@@ -1745,4 +1745,3 @@ recipes.forEach(recipe => {
 ingredients.forEach(ingredient => {
   //console.log(ingredient.ingredient)
 })
-
