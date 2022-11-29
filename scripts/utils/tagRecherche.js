@@ -101,11 +101,118 @@ export function listDropdown (ing, ul, type) {
             ingredientsTags.prepend(btnTagFilter)
             btnTagFilter.appendChild(iconClose) 
             
-        }    
+        } 
     })
 }
 
+//**  Button Click - Ingredient */
+const btnIng = document.getElementById('ingredient')
+btnIng.addEventListener('click', ingredientBtnSearchInput)
+function ingredientBtnSearchInput() {
+    const btnFilterIng = document.querySelector('.filter-ingredient')
+    const inputSearchIng = document.getElementById('search-ingredients')
+    
+    let value = btnIng.getAttribute('aria-expanded')
+    if(value == 'true') {
+        console.log('close ul')
+        inputSearchIng.setAttribute('value', 'Ingrédients')
+        inputSearchIng.setAttribute('type', 'button')
+        btnFilterIng.classList.replace('col-md-5', 'col-md-3')
+
+    } else {
+        console.log('open ul') 
+        inputSearchIng.removeAttribute('value')
+        inputSearchIng.setAttribute('type', 'search')
+        btnFilterIng.classList.replace('col-md-3', 'col-md-5')
+    }
+}
+
+//**  Button Click - Appareil */
+const btnApp = document.getElementById('appareil')
+btnApp.addEventListener('click', appareilBtnSearchInput)
+function appareilBtnSearchInput() {
+    const btnFilterApp = document.querySelector('.filter-appareil')
+    
+    let value = btnApp.getAttribute('aria-expanded')
+    if(value == 'true') {
+        console.log('close ul')
+        inputSearchApp.setAttribute('value', 'Appareils')
+        inputSearchApp.setAttribute('type', 'button')
+        btnFilterApp.classList.replace('col-md-5', 'col-md-3')
+
+    } else {
+        console.log('open ul')
+        const inputSearchApp = document.getElementById('search-appareils')
+        inputSearchApp.removeAttribute('value')
+        inputSearchApp.setAttribute('type', 'search')
+        btnFilterApp.classList.replace('col-md-3', 'col-md-5')
+    }
+}
+
+//**  Button Click - Unstensiles */
+const btnUst = document.getElementById('ustensil')
+btnUst.addEventListener('click', ustensileBtnSearchInput)
+function ustensileBtnSearchInput() {
+    const btnFilterUst = document.querySelector('.filter-ustensil')
+   
+    let value = btnUst.getAttribute('aria-expanded')
+    if(value == 'true') {
+        console.log('close ul')
+        inputSearchUst.setAttribute('value', 'Ustensils')
+        inputSearchUst.setAttribute('type', 'button')
+        btnFilterUst.classList.replace('col-md-5', 'col-md-3')
+
+    } else {
+        console.log('open ul')
+        const inputSearchUst = document.getElementById('search-ustensils')
+        inputSearchUst.removeAttribute('value')
+        inputSearchUst.setAttribute('type', 'search')
+        btnFilterUst.classList.replace('col-md-3', 'col-md-5')
+    }
+}
 
 
+//*** Input Click for INGREDIENTS */ 
+const inputSearchIng = document.getElementById('search-ingredients')
+inputSearchIng.addEventListener('keyup', (e) => {
+    console.log(e.target.value)
+    const listIng = document.querySelectorAll('.ingredients')
+    listIng.forEach(item => {
+        console.log(item.textContent)
+        if(item.textContent.toLowerCase().includes(e.target.value)) {
+            item.style.display = 'block'
+        } else {
+            item.style.display = 'none'
+        }
+    })
+})
+    
+//*** Input Click for APPAREILS */ 
+const inputSearchApp = document.getElementById('search-appareils')
+inputSearchApp.addEventListener('keyup', (e) => {
+    console.log(e.target.value)
+    const listApp = document.querySelectorAll('.appliance')
+    listApp.forEach(item => {
+        console.log(item.textContent)
+        if(item.textContent.toLowerCase().includes(e.target.value)) {
+            item.style.display = 'block'
+        } else {
+            item.style.display = 'none'
+        }
+    })
+})
 
-
+//*** Input Click for UNSTENSILE */ 
+const inputSearchUst = document.getElementById('search-ustensils')
+inputSearchUst.addEventListener('keyup', (e) => {
+    console.log(e.target.value)
+    const listUst = document.querySelectorAll('.ustensils')
+    listUst.forEach(item => {
+        console.log(item.textContent)
+        if(item.textContent.toLowerCase().includes(e.target.value)) {
+            item.style.display = 'block'
+        } else {
+            item.style.display = 'none'
+        }
+    })
+})

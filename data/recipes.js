@@ -1726,22 +1726,4 @@ export const recipes = [
   }
 ]
 
-// console.log(recipes.ustensils) - undefined
-const ustensils = []
-recipes.forEach(recipe => {
 
-  ustensils.push(...recipe.ustensils)
-  //console.log(...recipe.ustensils)
-})
-//console.log(ustensils)
-
-const ingredients = []
-recipes.forEach(recipe => {
-    ingredients.push(...recipe.ingredients)
-  // console.log(...recipe.ingredients)
-})
-// console.log(ingredients)
-
-ingredients.forEach(ingredient => {
-  //console.log(ingredient.ingredient)
-})

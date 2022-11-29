@@ -37,45 +37,53 @@
             </div>
         </div>
         <!-- Tags buttons results -->
-        <!-- <div class="row row-cols-auto row_tags mb-3">
-            <div class="col tag-filter" id="ingredients_tags"></div>          
-			<div class="col tag-filter" id="appliances_tags"></div>
-			<div class="col tag-filter" id="ustensils_tags"></div>
-        </div> -->
-        <!-- Tags buttons results -->
         <div class="row row-cols-auto row_tags mb-3">   
         </div>
          <!-- Filters for advanced search: -->
-        <div class="row dropdown row_dropDown mb-3">
-            <div class="filter filter-ingredient">       
-                <div type="button" class="btn btn-primary btn-lg" data-toggle="dropdown" id="ingredient" aria-expanded="">
-                    <span id="span-ingredients">Ingrédients</span>
-                    <i class="fa-solid fa-chevron-down" id="ingredient-filter-icon"></i>  
-                    <input id="search-ingredients" class="ingredients-color advancedSearch" type="button" data-advanced-filter="ingredients" placeholder="Rechercher dans ingredients"
-                    value="Ingrédient"
-                    autofocus>
-                </div>    
+        <div class="row dropdown row_dropDown mb-5 justify-content-lg-start align-items-start">
+
+            <div class="filter col-sm-12 col-md-3  mb-3 filter-ingredient">  
+                <div type="button" class="btn btn-primary btn-lg" data-toggle="dropdown" id="ingredient" aria-expanded=""> 
+                    <input id="search-ingredients" 
+                           class="input__search" 
+                           data-advanced-filter="ingredients" 
+                           placeholder="Rechercher dans ingredients"
+                           value="Ingrédients" 
+                           type="button">           
+                    <i class="fa-solid fa-chevron-down" id="ingredient-filter-icon"></i> 
+                </div>  
                 <ul class="row dropdown-menu ul-tag" id="ingredient-list" data-filter="ingredient" role="listbox" aria-labelledby="dropdownMenuButton">                      
                 </ul>                 
-            </div>         
-            <div class="filter filter-appareil">
-                <div class="btn btn-lg" data-toggle="dropdown" id="appareil" aria-expanded="">
-                    <span id="span-appareil">Appareils</span>
-                    <i class="fa-solid fa-chevron-down" id="appareil-filter-icon"></i>  
-                    <input id="search-appareils" class="appareils-color advancedSearch" type="button" data-advanced-filter="appareils" placeholder="Rechercher dans appareils">
-                </div>    
+            </div>  
+
+            <div class="filter col-sm-12 col-md-3  mb-3 filter-appareil">
+                <div type="button" class="btn btn-lg" data-toggle="dropdown" id="appareil" aria-expanded="">
+                    <input id="search-appareils"
+                           class="input__search" 
+                           data-advanced-filter="appareils" 
+                           placeholder="Rechercher dans appareils"
+                           value="Appareils"
+                           type="button" >       
+                    <i class="fa-solid fa-chevron-down" id="appareil-filter-icon"></i>
+                </div>   
                 <ul class="row dropdown-menu ul-tag" id="appareil-list" data-filter="appareil" role="listbox" aria-labelledby="dropdownMenuButton">                
                 </ul>    
-            </div>           
-            <div class="filter filter-unstensile">
-                <div class="btn btn-lg" data-toggle="dropdown" id="ustensile">
-                    <span id="span-unstensile">Ustensiles</span>
-                    <i class="fa-solid fa-chevron-down" id="ustensile-filter-icon"></i>  
-                    <input id="search-unstensiles" class="unstensiles-color advancedSearch" type="button" data-advanced-filter="unstensiles" placeholder="Rechercher dans unstensiles">
-                </div>    
-                <ul class="row dropdown-menu ul-tag" id="ustensile-list" data-filter="ustensile" role="listbox" aria-labelledby="dropdownMenuButton">        
+            </div>   
+
+            <div class="filter col-sm-12 col-md-3  mb-3 filter-ustensil">
+                <div type="button" class="btn btn-lg" data-toggle="dropdown" id="ustensil">
+                    <input id="search-ustensils" 
+                           class="input__search"  
+                           data-advanced-filter="ustensils" 
+                           placeholder="Rechercher dans ustensils"
+                           value="Ustensils"
+                           type="button">
+                    <i class="fa-solid fa-chevron-down" id="ustensil-filter-icon"></i> 
+                </div>  
+                <ul class="row dropdown-menu ul-tag" id="ustensil-list" data-filter="ustensil" role="listbox" aria-labelledby="dropdownMenuButton">        
                 </ul>      
-            </div>  
+            </div> 
+
         </div>            
     </div>    
        

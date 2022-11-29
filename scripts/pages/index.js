@@ -5,7 +5,7 @@ import { listDropdown } from '../utils/tagRecherche.js'
 //array of 50 recipes
 export let currentRecipes = { recipes: recipes }
 
-//console.log(currentRecipes.recipes)
+// console.log(currentRecipes.recipes)
 
 // afiche tout les recettes sur la page grace à RecipeFactory
 export const updateRecipes = (currentRecipes) => {
@@ -57,7 +57,7 @@ const listAppliance = (listAppliance) => {
   })
 }
 const listUstensils = (listUstensils) => {
-  const ul = document.getElementById('ustensile-list')
+  const ul = document.getElementById('ustensil-list')
   listUstensils.forEach(ust => {
     listDropdown (ust, ul, 'ustensils')
   })

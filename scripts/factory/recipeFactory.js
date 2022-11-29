@@ -74,7 +74,7 @@ export class RecipeFactory {
                 <img src="" alt="" class="card-img-top rounded-top">
                 <div class="card-body">
                   <div class="row">
-                    <h5 class="col-9 col-sm-6 col-md-8 card-title text-md-start">${this.name}</h5>
+                    <h5 class="col-9 col-sm-6 col-md-8 card-title mb-2 text-md-start">${this.name}</h5>
                     <h5 class="col-3 col-sm-6 col-md-4 card-time  text-end">
                       <i class="fa-regular fa-clock"></i>${this.time} min
                     </h5>

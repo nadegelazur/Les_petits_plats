@@ -30,6 +30,9 @@
 .tag-filter {
     display: block;
 }
+.row_tags {
+    margin: 0;
+}
 .btn-tags {
     height: 37px;
     border-radius: 5px;
@@ -49,13 +52,17 @@
 /*** DROPDOWN ***/
 .dropdown-menu {
     border: none !important;
-    min-width: 25rem !important;
+    /* min-width: 25rem !important; */
     transform: none !important;
     display: none;
-    top: 93% !important;
-    width: 50%;
+    top: 80% !important;
     position: absolute !important;
     height: auto;
+}
+.dropdown-menu.show {
+    display: inline-flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
@@ -70,7 +77,7 @@
 .btn-appliance {
     background-color: #68D9A4;    
 }
-#ustensile-list,
+#ustensil-list,
 .btn-ustensils {
     background-color:#ED6454;
 }
@@ -80,52 +87,60 @@
 }
 .dropdown-item {
     color: #fff!important;
+    width: 50% !important;
+    font-size: 13px;
 }
 .filter {
-    margin-right: 15px;
+    margin-right: 15px; 
+    padding: 0;
 }
 
-/* .fa-chevron-down,
-.fa-chevron-up {
-    padding-left: 15px;
-    display: block;
-} */
 .btn {
     font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.advancedSearch {
-    display: none;
+.input__search {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
-.btn#ingredient input {
-    background-color:#007bff;
+/* placeholder */
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.696);
+}
+.btn input {
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.btn#ingredient input,
+.btn#ingredient {
+    background-color:#007bff; 
     border: none;
 }
+
+/* .btn#ingredient[aria-expanded="true"] {
+    background-color: red;
+} */
+
+.btn#appareil input,
 .btn#appareil {
     background-color: #68D9A4;
     color: #fff;
 }
-.btn#appareil input {
-    background-color: #68D9A4;
-    color: #fff;
-    border: none;
-}
-.btn#ustensile {
+.btn#ustensil input,
+.btn#ustensil {
     background-color: #ED6454;
     color: #fff;
-}
-.btn#ustensile input{
-    background-color: #ED6454;
-    color: #fff;
-    border: none;
 }
 
 /*** RECIPES CARD ***/
 
 .card {
     border-radius: 5px;
+    overflow: hidden;
 }
 .hide {
     display: none;
@@ -138,6 +153,7 @@
 .card-body {
     height: 186px;
     background-color: #E7E7E7; 
+    padding: 1rem !important;
 }
 h5 {
     font-size: 18px;
@@ -164,7 +180,7 @@ p {
 .card-ingridients {
     width: 171px;
     height: 105px;
-    line-height: 14px;
+    line-height: 12px;
     letter-spacing: -0.5px;
     padding-right: 0;
     overflow: hidden;
