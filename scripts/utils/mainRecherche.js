@@ -16,16 +16,12 @@ export const mainRecherche = (recipes) => {
         recipe.name.toLowerCase().includes(valueInput) || 
         recipe.description.toLowerCase().includes(valueInput) ||
         recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(valueInput)))       
-      console.log(currentRecipes.recipes)
-        // tout ça en boucle for ==== currentRecipes.recipes = recipes.filter
-
+    
       if (currentRecipes.recipes.length == 0) {
         errorMessage.style.display = 'block'
       }        
     } else {
-      // j'enleve le msg d'error
       errorMessage.style.display = 'none'
-      //j'afiche la liste de recettes
     }
   updateRecipes(currentRecipes)   
   updateDropbox(currentRecipes.recipes)

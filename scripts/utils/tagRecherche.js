@@ -11,15 +11,13 @@ export function listDropdown (ing, ul, type) {
     // when we click on dropdown li
     li.addEventListener('click', e => { 
         let contentTag = e.target.textContent.toLowerCase()
-        console.log(contentTag)
+        // console.log("выбранный liBtnTag :", contentTag)
         
         // filtrer les recettes
         if(li.classList.contains('ingredients')) { 
             currentRecipes.recipes = currentRecipes.recipes.filter(recipe => 
                 recipe.ingredients.some(ingredient => 
                     ingredient.ingredient.toLowerCase().includes(contentTag)))
-            console.log(currentRecipes.recipes)
-
             ul.removeChild(li)
             updateRecipes(currentRecipes)  
             btnTagsCreate() 
@@ -27,8 +25,6 @@ export function listDropdown (ing, ul, type) {
         else if (li.classList.contains('appliance')) {
             currentRecipes.recipes = currentRecipes.recipes.filter(recipe => 
                 recipe.appliance.toLowerCase().includes(contentTag))
-            console.log(currentRecipes.recipes)
-
             ul.removeChild(li)
             updateRecipes(currentRecipes)
             btnTagsCreate()     
@@ -36,8 +32,6 @@ export function listDropdown (ing, ul, type) {
         else if (li.classList.contains('ustensils')) {
            currentRecipes.recipes = currentRecipes.recipes.filter(recipe =>
                 recipe.ustensils.some(ustensil => ustensil.toLowerCase().includes(contentTag)))
-            console.log(currentRecipes.recipes)
-
             ul.removeChild(li)
             updateRecipes(currentRecipes)    
             btnTagsCreate() 
@@ -58,39 +52,32 @@ export function listDropdown (ing, ul, type) {
 
             iconClose.addEventListener('click', () => {
                 const valueInput = document.querySelector('.form-control').value.toLowerCase()
-                console.log(valueInput)
 
                 btnTagFilter.remove()
-
                 // этот фильтр предназначен для возврата на основной поиск (MainRecherche), исп. тот же код
                 currentRecipes.recipes = recipes.filter(recipe =>       
                     recipe.name.toLowerCase().includes(valueInput) || 
                     recipe.description.toLowerCase().includes(valueInput) ||
                     recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(valueInput)))
-
                     // je liste les tags - je récupère les tag actifs
                     const btnTags = document.querySelectorAll('.btn-tags')
-                    console.log(btnTags)
                     // je parcour la liste des tags -  
                     btnTags.forEach(tag => {
-                        console.log(tag.textContent)
+                        console.log("Оставшиеся открытые таги", tag.textContent)
                         // si c'est le tag ingredient je utilise le filtre d'ingredient
                         if(tag.classList.contains('btn-ingredients')){
                             currentRecipes.recipes = currentRecipes.recipes.filter(recipe => 
                                 recipe.ingredients.some(ingredient => 
                                     ingredient.ingredient.toLowerCase().includes(tag.textContent.toLowerCase())))
-                            console.log(currentRecipes.recipes) 
                         }
                         if(tag.classList.contains('.btn-appliance')){
                             currentRecipes.recipes = currentRecipes.recipes.filter(recipe => 
                                 recipe.appliance.toLowerCase().includes(tag.textContent.toLowerCase()))
-                            console.log(currentRecipes.recipes)
                         }
                         // si c'est tag ustensil ...
                         if(tag.classList.contains('.btn-ustensils')){
                             currentRecipes.recipes = currentRecipes.recipes.filter(recipe =>
                                 recipe.ustensils.some(ustensil => ustensil.toLowerCase().includestag.textContent.toLowerCase()))
-                                console.log(currentRecipes.recipes)
                         }
                     })
    
@@ -111,19 +98,20 @@ btnIng.addEventListener('click', ingredientBtnSearchInput)
 function ingredientBtnSearchInput() {
     const btnFilterIng = document.querySelector('.filter-ingredient')
     const inputSearchIng = document.getElementById('search-ingredients')
+    const iconIng = document.getElementById('ingredient-filter-icon')
     
     let value = btnIng.getAttribute('aria-expanded')
     if(value == 'true') {
-        console.log('close ul')
         inputSearchIng.setAttribute('value', 'Ingrédients')
         inputSearchIng.setAttribute('type', 'button')
-        btnFilterIng.classList.replace('col-md-5', 'col-md-3')
+        btnFilterIng.classList.replace('col-md-8', 'col-md-3')
+        iconIng.removeAttribute('style', 'transform')
 
     } else {
-        console.log('open ul') 
         inputSearchIng.removeAttribute('value')
         inputSearchIng.setAttribute('type', 'search')
-        btnFilterIng.classList.replace('col-md-3', 'col-md-5')
+        btnFilterIng.classList.replace('col-md-3', 'col-md-8')
+        iconIng.style.transform = "rotate(180deg)"
     }
 }
 
@@ -132,20 +120,21 @@ const btnApp = document.getElementById('appareil')
 btnApp.addEventListener('click', appareilBtnSearchInput)
 function appareilBtnSearchInput() {
     const btnFilterApp = document.querySelector('.filter-appareil')
+    const inputSearchApp = document.getElementById('search-appareils')
+    const iconApp = document.getElementById('appareil-filter-icon')
     
     let value = btnApp.getAttribute('aria-expanded')
     if(value == 'true') {
-        console.log('close ul')
         inputSearchApp.setAttribute('value', 'Appareils')
         inputSearchApp.setAttribute('type', 'button')
-        btnFilterApp.classList.replace('col-md-5', 'col-md-3')
-
+        btnFilterApp.classList.replace('col-md-8', 'col-md-3')
+        iconApp.removeAttribute('style', 'transform')
     } else {
-        console.log('open ul')
-        const inputSearchApp = document.getElementById('search-appareils')
+
         inputSearchApp.removeAttribute('value')
         inputSearchApp.setAttribute('type', 'search')
-        btnFilterApp.classList.replace('col-md-3', 'col-md-5')
+        btnFilterApp.classList.replace('col-md-3', 'col-md-8')
+        iconApp.style.transform = "rotate(180deg)"
     }
 }
 
@@ -154,20 +143,20 @@ const btnUst = document.getElementById('ustensil')
 btnUst.addEventListener('click', ustensileBtnSearchInput)
 function ustensileBtnSearchInput() {
     const btnFilterUst = document.querySelector('.filter-ustensil')
+    const inputSearchUst = document.getElementById('search-ustensils')
+    const iconUst = document.getElementById('ustensil-filter-icon')
    
     let value = btnUst.getAttribute('aria-expanded')
     if(value == 'true') {
-        console.log('close ul')
         inputSearchUst.setAttribute('value', 'Ustensils')
         inputSearchUst.setAttribute('type', 'button')
-        btnFilterUst.classList.replace('col-md-5', 'col-md-3')
-
+        btnFilterUst.classList.replace('col-md-8', 'col-md-3')
+        iconUst.removeAttribute('style', 'transform')
     } else {
-        console.log('open ul')
-        const inputSearchUst = document.getElementById('search-ustensils')
         inputSearchUst.removeAttribute('value')
         inputSearchUst.setAttribute('type', 'search')
-        btnFilterUst.classList.replace('col-md-3', 'col-md-5')
+        btnFilterUst.classList.replace('col-md-3', 'col-md-8')
+        iconUst.style.transform = "rotate(180deg)"
     }
 }
 
@@ -175,10 +164,11 @@ function ustensileBtnSearchInput() {
 //*** Input Click for INGREDIENTS */ 
 const inputSearchIng = document.getElementById('search-ingredients')
 inputSearchIng.addEventListener('keyup', (e) => {
-    console.log(e.target.value)
+    // console.log(e.target.value)
     const listIng = document.querySelectorAll('.ingredients')
+
     listIng.forEach(item => {
-        console.log(item.textContent)
+        // console.log("input filterSearch :", item.textContent)
         if(item.textContent.toLowerCase().includes(e.target.value)) {
             item.style.display = 'block'
         } else {
@@ -189,11 +179,10 @@ inputSearchIng.addEventListener('keyup', (e) => {
     
 //*** Input Click for APPAREILS */ 
 const inputSearchApp = document.getElementById('search-appareils')
-inputSearchApp.addEventListener('keyup', (e) => {
-    console.log(e.target.value)
+inputSearchApp.addEventListener('keyup', (e) => {   
     const listApp = document.querySelectorAll('.appliance')
-    listApp.forEach(item => {
-        console.log(item.textContent)
+
+    listApp.forEach(item => {      
         if(item.textContent.toLowerCase().includes(e.target.value)) {
             item.style.display = 'block'
         } else {
@@ -204,11 +193,10 @@ inputSearchApp.addEventListener('keyup', (e) => {
 
 //*** Input Click for UNSTENSILE */ 
 const inputSearchUst = document.getElementById('search-ustensils')
-inputSearchUst.addEventListener('keyup', (e) => {
-    console.log(e.target.value)
+inputSearchUst.addEventListener('keyup', (e) => {   
     const listUst = document.querySelectorAll('.ustensils')
-    listUst.forEach(item => {
-        console.log(item.textContent)
+
+    listUst.forEach(item => {       
         if(item.textContent.toLowerCase().includes(e.target.value)) {
             item.style.display = 'block'
         } else {

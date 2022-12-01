@@ -88,7 +88,8 @@
 .dropdown-item {
     color: #fff!important;
     width: 50% !important;
-    font-size: 13px;
+    font-size: 15px;
+    white-space: wrap;
 }
 .filter {
     margin-right: 15px; 

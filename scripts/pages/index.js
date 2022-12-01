@@ -19,7 +19,7 @@ export const updateRecipes = (currentRecipes) => {
 
 // Open DROPDOWN liste
 export const updateDropbox = (recipes) => {
-  // console.log(recipes)
+  
   let ingredients = []
   let ustensils = []
   let appliance = []
@@ -39,8 +39,8 @@ export const updateDropbox = (recipes) => {
   appliance = [...new Set(appliance)].sort()
 
   listIngredients(ingredients)
-  listAppliance(ustensils)
-  listUstensils(appliance)
+  listAppliance(appliance)
+  listUstensils(ustensils)
 }
 // creation des Dropdown list's => ingredient - appareil - ustensile
 const listIngredients = (listIngredients) => { 
@@ -52,12 +52,14 @@ const listIngredients = (listIngredients) => {
 }
 const listAppliance = (listAppliance) => {
   const ul = document.getElementById('appareil-list')
+  ul.innerHTML = ''
   listAppliance.forEach(appl => {
     listDropdown (appl, ul, 'appliance')
   })
 }
 const listUstensils = (listUstensils) => {
   const ul = document.getElementById('ustensil-list')
+  ul.innerHTML = ''
   listUstensils.forEach(ust => {
     listDropdown (ust, ul, 'ustensils')
   })
