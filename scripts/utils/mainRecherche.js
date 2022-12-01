@@ -11,13 +11,26 @@ export const mainRecherche = (recipes) => {
     let valueInput = e.target.value.toLowerCase()
     // console.log(valueInput)
     if (valueInput.length > 2) {
-      // Objet - currentRecipes.recipes
-      currentRecipes.recipes = recipes.filter(recipe =>       
-        recipe.name.toLowerCase().includes(valueInput) || 
-        recipe.description.toLowerCase().includes(valueInput) ||
-        recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(valueInput)))       
-      console.log(currentRecipes.recipes)
-        // tout ça en boucle for ==== currentRecipes.recipes = recipes.filter
+      let results = []
+       
+      currentRecipes.recipes = [...recipes];
+      console.log(currentRecipes)
+      for(let i = 0; currentRecipes.recipes.length > i; i++) {
+
+              if(currentRecipes.recipes[i].name.toLowerCase().includes(valueInput) ||
+                currentRecipes.recipes[i].description.toLowerCase().includes(valueInput)) {
+                  results.push(currentRecipes.recipes[i]);
+                  
+                } else {
+                  for(let y = 0; currentRecipes.recipes[i].ingredients.length > y; y++) {      
+                    if(currentRecipes.recipes[i].ingredients[y].ingredient.toLowerCase().includes(valueInput)) {
+                      results.push(currentRecipes.recipes[i]);
+                      break;
+                    }
+                  }               
+                }   
+            }
+      currentRecipes.recipes = [...results]
 
       if (currentRecipes.recipes.length == 0) {
         errorMessage.style.display = 'block'
